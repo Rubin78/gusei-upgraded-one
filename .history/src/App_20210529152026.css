@@ -1,0 +1,1026 @@
+
+.slider {
+  border: 1px solid red;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+
+.slide{
+
+  border:2px solid blue;
+min-width: 100%;
+height:80%;
+transition: 0.5s;
+}
+
+.overlay{
+
+
+
+  background-color: #0000008a;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+
+
+
+.box{
+
+height: 80px;
+border:2px solid red;
+
+
+}
+
+
+.hoverwidthcards{
+
+  width: 100%;
+}
+
+
+div#Top-cards { 
+  height: 230px;
+
+  border-radius: 25px ;
+  border:  1px solid transparent;
+  margin: 23px;
+}
+
+
+
+
+
+
+
+.transbox {
+    /* background-color:#0000008a; */
+    background-color: #00000047;
+    opacity: 1;
+  /* opacity: 0.38; */
+  /* height: 94vh;
+  width: 100%;
+  z-index: 1;
+  object-fit: cover;
+  position: absolute; */
+
+  position: absolute;
+width: 100%;
+height: 100vh;
+left: 50%;
+right: 50%;
+object-fit: cover;
+transform: translate(-50%, 0%);
+z-index: 30;
+}
+
+div.transbox p {
+  font-weight: bold;
+  color: #000000;
+}
+
+
+/* .videoplayerloop{
+  
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity .2s cubic-bezier(.2,0,.4,1);
+    opacity: .52;
+    -o-object-fit: cover;
+    object-fit: cover;
+} */
+
+#goleft{
+
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 10%;
+  height: 80%;
+
+}
+
+.navbar{
+
+  /* background-color: red; */
+  padding: 8px 30px;
+
+  font-size: 15px;
+  font-family: "Gotham-Medium","Helvetica Neue","sans-serif";
+  
+  /* letter-spacing: .08em; */
+  
+}
+
+
+#imgcardradius{
+
+border-radius: 25px;
+}
+
+* {
+  cursor: pointer;
+}
+
+.li.nav-item{
+  color: white;
+}
+
+a.headerstyle.nav-link {
+  color: black;
+}
+nav.navbar.navbar-expand-md.navbar-light.bg-light {
+  position: fixed;
+  width: 100%;
+  /* background-color: white; */
+  z-index: 99;
+  /* height:65px; */
+  color: black;
+}
+/* #navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.navbar-light .navbar-nav .nav-link {
+
+  color: black;
+}
+
+.headertext{
+
+
+  font-size: 15px;
+  font-family: "Gotham-Medium","Helvetica Neue","sans-serif";
+  letter-spacing: .27em;
+
+
+}
+
+.section1{
+  /* background-color: red; */
+  height: 100vh;
+position: relative;
+ 
+
+  
+}
+
+.transparent{
+
+  border-width: 0px;
+  -webkit-box-shadow: 0px 0px;
+  box-shadow: 0px 0px;
+  background-color: rgba(0,0,0,0.0);
+  background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
+  background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+  background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);}
+.section2{
+  /* height: 93.5vh; */
+  background: linear-gradient(180deg,#000 0,#10217b 50%,#10217b);
+  color: #fff;
+  padding:50px;
+
+}
+
+.section3{
+  height: 100vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+
+.section4{
+  /* height: 100vh; */
+  background: white;
+  
+}
+
+
+.mobile-text{
+  height: 100px;
+  display: flex;
+}
+.descript{
+
+
+  color: #212121;
+  font-size: 48px;
+  line-height: 56px; 
+  font-weight: 700;
+  margin-bottom: 26px;
+
+}
+
+
+.descriptinside{
+
+  color: rgba(33,33,33,.8);
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 20px;
+
+
+}
+/* .colheight{ */
+
+
+  /* background-color: red; */
+/* } */
+
+
+
+li.nav-item {
+  /* background: red; */
+  padding: 8px 28px;
+  color: #000000;
+}
+
+.top-text{
+  display: flex;
+  /* height: 550px; */
+  height: 600px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  color: white;
+  /* background-color: red; */
+
+ }  
+.textdecoration{
+  color: rgb(33, 33, 33);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 34px;
+  text-align: center;
+  margin: 0px 0px 24px;
+  font-family: Inter,Lato,Open Sans,Corbel,Arial,sans-serif;
+
+}
+
+.bottom{
+
+height: 100%;
+display: flex;
+flex-direction: row;
+flex-wrap:wrap ;
+padding: 5px;
+}
+
+.bottomitem{
+  width:100%;
+  height: auto;
+  padding: 20px;
+  position: relative;
+  
+}
+
+
+.bottomiteminner{
+display: flex;
+flex: 1;
+/* background-color: brown; */
+position: relative;
+
+}
+
+
+
+img.ri
+{
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -1%);
+	max-width: 100%;
+	height: 570px;
+  border-radius: 25px;
+  border: 12px solid black;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.9);
+  
+
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+
+
+
+
+.btm-rightcontent{
+
+
+height: 100%;
+display: flex;
+flex-direction: row;
+flex-wrap:wrap ;
+padding: 5px;
+align-content: center;
+
+}
+
+
+
+.btm-contentitem{
+
+
+width:100%;
+height: auto;
+padding: 20px;
+position: relative;
+  /* background-color: gray  ; */
+
+}
+
+
+
+.btm-iteminner{
+
+display: flex;
+flex: 1;
+height: 90px;
+position: relative;
+justify-content: flex-start;
+align-items: center;
+  
+  }
+  
+
+  .googleplaystore{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    border-radius: inherit;
+    width: 200px;
+    height: 55px;
+    border-radius: 5px;
+    background-color: black;
+  
+  }
+
+
+/* ............... */
+
+
+  .btm-leftcontent{
+
+height: 100%;
+display: flex;  
+flex-direction: row;
+flex-wrap:wrap ;
+padding: 5px;
+align-content: center;
+  
+  }
+  
+  
+  
+  .btm-contentitemleft{
+  
+
+    width:100%;
+    height: auto;
+    padding: 20px;
+    position: relative;
+    color: red;
+  
+  }
+  
+  
+  
+  .btm-iteminnerleft{
+
+    display: flex;
+    flex: 1;
+    height: 100px;
+  
+
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+/* 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+    transition: 0.3s;
+    
+    }
+    /* a.textfont {
+      font-family: "Gotham-Medium","Helvetica Neue","sans-serif";
+      letter-spacing: .28em;
+  } */
+
+.footer{
+
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap ;
+  padding: 5px;
+
+}
+
+.footer-item{
+  width:100%;
+  height: auto;
+  padding: 20px;
+  position: relative;
+  
+
+}
+
+
+.footer-iteminner{
+
+
+  display: flex;
+flex: 1;
+/* background-color: brown; */
+position: relative;justify-content: center;
+
+}
+a.active {
+    color: black;
+    text-decoration: none;
+
+}
+.footer-iteminnerfooter{
+
+
+  display: flex;
+flex: 1;
+/* background-color: brown; */
+position: relative;justify-content: center;
+background-color: #c4c4c4;
+
+}
+.section5{
+
+padding: 120px;
+  position: relative;
+}
+
+.mobile-img{
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.BV3Gxdg {
+  opacity: 1;
+  transform: translateY(0px) !important;
+}
+
+._3NeCR64 {
+  transform: translateY(32px);
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(0.2, 0, 0.4, 1) 0s, transform cubic-bezier(0.2, 0, 0.4, 1) 0s;
+}
+
+
+ #button{ 
+  padding: 10px 37px; 
+  display: inline-block; 
+  color: #000000; 
+  letter-spacing: 2px; 
+  text-transform: uppercase; 
+  text-decoration: none; 
+  font-size: 1.4em; 
+  overflow: hidden; 
+  z-index: 20;
+  border-radius: 25px;
+  border:0.8px solid white;
+  background-color: white;
+
+} 
+
+/* 39ff14 deafult */
+
+#button:hover { 
+  color: #fff; 
+  background: #ff4848; 
+  box-shadow: 0 0 50px #ff4848; 
+  border-color: transparent;
+} 
+.DesignInnovation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  color:#ffffff;
+  text-Align:justify;
+  margin: 0 0 28px;
+  font-size: 78px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: pre-wrap;
+  font-weight: bolder;
+  font-family: Inter,Lato,Open Sans,Corbel,Arial,sans-serif,Anton;
+
+  /* background-color:green */
+;
+ 
+}
+
+.videoplace{
+position: absolute;
+width: 100%;
+height: 100vh;
+left: 50%;
+right: 50%;
+object-fit: cover;
+transform: translate(-50%, 0%);
+z-index: -1;
+
+
+}
+
+
+
+.coltohave{
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+
+
+.youtubevideo{
+
+position: absolute;
+top: 0px;
+left: 0px;
+width: 65%;
+border-radius: 8px;
+height: 100%;
+
+}
+
+
+
+.section3header{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 270px;
+}
+
+
+
+
+
+
+.downloadappinside{
+
+  height: 608px;
+}
+
+
+
+
+
+
+.downloadappinside1{
+
+
+  height: 608px;
+}
+
+
+
+
+.tatosdescription{
+
+width: 600px;
+border: 1px solid transparent;
+
+}
+
+
+
+
+
+
+
+#goright{
+
+
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 10%;
+  height: 80%;
+}
+
+.App {
+  text-align: center;
+}
+.carouselinner{
+
+  transition: transform 137.333ms ease 0ms !important;
+
+}
+
+.boxtext{
+
+  display: flex;
+  align-items:space-between;
+  justify-content: center;
+  padding-left: 40px;
+}
+
+
+.buttonstarted{
+
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+  .example-appear {
+    opacity: 0.04;
+    
+ }
+ .example-appear.example-appear-active {
+    opacity: 2;
+    transition: opacity 50s ease-in;
+ }
+
+
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+.section2header{
+
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 575px) {
+.DesignInnovation.aos-init.aos-animate {
+    font-size: 55px;
+}
+
+
+#button {
+    padding: 7px 32px;
+    display: inline-block;
+    color: #000000;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.1em;
+    overflow: hidden;
+    z-index: 20;
+    border-radius: 25px;
+    border: 0.9px solid white;
+    background-color: white;
+}
+
+
+
+.section2header{
+
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1.Aboutme {
+    font-size: 2rem;
+}
+
+
+div#Top-cards {
+    height: 363px; 
+     /* width: 431px; */
+    width: auto;
+    border-radius: 25px;
+    border: 1px solid transparent;
+}
+
+
+.youtubevideo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    border-radius: 8px;
+    height: 100%;
+}
+
+
+.textdecoration {
+    color: rgb(33, 33, 33);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 35px;
+    text-align: center;
+    margin: 0px 0px 11px;
+    font-family: Inter,Lato,Open Sans,Corbel,Arial,sans-serif;
+}
+
+
+.section3header{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 240px;
+}
+
+
+
+.btm-iteminnerleft {
+    display: flex;
+    flex: 1 1;
+    height: 75px;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+    transition: 0.3s;
+}
+
+
+
+
+img.ri {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -1%);
+    max-width: 100%;
+    height: 530px;
+    border-radius: 25px;
+    border: 12px solid black;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.9);
+}
+
+.downloadappinside{
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.downloadappinside{
+
+  height: 400px;
+  
+}
+
+.section5 {
+    padding: 80px;
+    position: relative;
+}
+
+
+}
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 766px) {
+
+  .DesignInnovation.aos-init.aos-animate {
+    font-size: 65px;
+}
+
+#button {
+    padding: 7px 32px;
+    display: inline-block;
+    color: #000000;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.1em;
+    overflow: hidden;
+    z-index: 20;
+    border-radius: 25px;
+    border: 0.9px solid white;
+    background-color: white;
+}
+
+
+.buttonstarted{
+
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+.tatosdescription{
+
+width: 800px;
+border: 1px solid transparent;
+
+}
+
+
+
+.youtubevideo{
+
+position: absolute;
+top: 0px;
+left: 0px;
+width: 100%;
+border-radius: 12px;
+height: 100%;
+
+}
+
+
+
+
+.section3header{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+}
+
+
+
+.downloadappinside{
+
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section5 {
+    padding: 4px;
+    position: relative;
+}
+
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 1024px) {
+
+.buttonstarted{
+
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#button {
+    padding: 7px 25px;
+    display: inline-block;
+    color: #000000;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.25em;
+    overflow: hidden;
+    z-index: 20;
+    border-radius: 25px;
+    border: 0.8px solid white;
+    background-color: white;
+}
+
+
+
+
+div#Top-cards {
+    height: 230px;
+    width: 100px;
+    border-radius: 25px;
+    border: 1px solid transparent;
+    margin: 23px;
+}
+
+.youtubevideo {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    width: 100%;
+    border-radius: 8px;
+    /* height: auto; */
+    height: 100%;
+    /* width: auto; */
+}
+
+.descript {
+    color: #212121;
+    font-size: 31px;
+    line-height: 40px;
+    font-weight: 700;
+    margin-bottom: 26px;
+}
+
+.textdecoration {
+    color: rgb(33, 33, 33);
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 34px;
+    text-align: center;
+    margin: 0px 0px 24px;
+    font-family: Inter,Lato,Open Sans,Corbel,Arial,sans-serif;
+}
+
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {background: orange;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
+/* body{
+} */
+
+
+}

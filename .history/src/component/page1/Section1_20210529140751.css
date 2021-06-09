@@ -1,0 +1,103 @@
+
+
+.section1{
+  /* background-color: red; */
+  height: 100vh;
+position: relative;
+ 
+
+  
+}
+
+.carousel-indicators li { visibility: hidden; }
+
+
+img.carouselimage {
+    border-radius: 15px;
+
+  box-shadow:  1px 1px 5px 8px #f7f7f7;
+-moz-box-shadow: 10px 10px 60px 0px #f7f7f7;
+width: 50%;
+display: block;
+height: auto;
+
+}
+.Caritem.active.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+
+  padding: 10px;
+    
+}
+
+.containerBody2{
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: 'no-repeat';
+  height: 100vh;
+  width: calc(100vw -12px); 
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+/* background-color: black; */
+
+}
+
+.container2insider{
+  width: 100%;
+  padding: 2px;
+}
+
+#container2{
+
+  
+  /* width: calc(100vw -12px);
+
+  overflow-x: hidden;
+  overflow-y: auto;
+   */
+position: absolute;
+  background-position: center;
+  background-size: cover;
+  background-repeat: 'no-repeat';
+position: relative;
+justify-content: center;
+display: flex;
+flex-grow: 1 1 0 ; 
+
+}
+
+
+.emptyspace{
+
+
+  height: 50px;
+}
+/* .navbar{
+
+  display: flex;
+  flex: 1;
+  position: absolute; */
+  /* flex-flow:wrap ; */
+/* flex-wrap: wrap;
+} */
+
+
+  div#Top-cards {
+      height: 385px;
+      margin:32px;
+  }
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2.5rem;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+
+}

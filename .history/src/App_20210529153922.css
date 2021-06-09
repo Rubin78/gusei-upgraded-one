@@ -1,0 +1,19 @@
+
+.section1{
+
+  height: 100vh;
+  position: relative;
+/*   background-color: aqua;
+ */  
+}
+
+
+.navbarsection{
+  height: 35vh;
+  background-color: azure;
+}
+
+.bottomsection{
+  height: 65vh;
+  background-color: blue;
+}

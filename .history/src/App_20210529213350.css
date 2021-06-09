@@ -1,0 +1,192 @@
+
+.section1{
+
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+/*   background-color: aqua;
+ */  
+}
+
+
+.navbarsection{
+  height: 35vh;
+  background-color: azure;
+}
+
+.bottomsection{
+  height: 65vh;
+  background-color: blue;
+}
+
+.navbar{
+
+  /* background-color: red; */
+  padding: 8px 30px;
+
+  font-size: 15px;
+  font-family: "Gotham-Medium","Helvetica Neue","sans-serif";
+  
+  /* letter-spacing: .08em; */
+  
+}
+
+
+#imgcardradius{
+
+border-radius: 25px;
+}
+
+* {
+  cursor: pointer;
+}
+
+.li.nav-item{
+  color: white;
+}
+
+a.headerstyle.nav-link {
+  color: black;
+}
+nav.navbar.navbar-expand-md.navbar-light.bg-light {
+  position: fixed;
+  width: 100%;
+  /* background-color: white; */
+  z-index: 99;
+  /* height:65px; */
+  color: black;
+}
+/* #navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.navbar-light .navbar-nav .nav-link {
+
+  color: black;
+}
+
+.headertext{
+
+
+  font-size: 15px;
+  font-family: "Gotham-Medium","Helvetica Neue","sans-serif";
+  letter-spacing: .27em;
+
+
+}
+
+
+li.nav-item {
+  /* background: red; */
+  padding: 8px 28px;
+  color: #000000;
+}
+.col-2.socialmediaicons{
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+
+
+}
+.imagecontentinside {
+    height: 66px;
+    border-radius: 50%;
+    width: 66px;
+    /* border-radius: 100vh; */
+    background: green;
+    flex-direction: column;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img.socialmediaimage {
+    height: 3.5vh;
+    width: auto;
+    /* border-radius: 50%; */
+}
+.imagecontent {
+  height: 10vh;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    /* height: 6vh;
+    border-radius: 50%;
+      flex-direction: column;
+
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+  
+}
+div#socialmain {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: green;
+}
+
+.col-md-3 {
+    background: blueviolet;
+}
+
+.app1.col {
+    height: 14ch;
+    border-radius: 5px;
+    background: black;
+}
+
+.app2.col {
+    height: 14ch;
+    border-radius: 5px;
+    background: black;
+}
+
+.appdwnloaditem {
+    width: 22%;
+    height: 28%;
+    /* padding: 5px; */
+    background-color: brown;
+    margin: 20px;
+    border-radius: 12px;
+}
+
+.content {
+    width: 80%;
+    height: 80%;
+    /* padding: 5px; */
+    background-color: brown;
+    margin: 20px;
+    border-radius: 12px;
+}
+.contentinside{
+  flex: 1;
+}
+
+.appdwnloaditeminside{
+  flex: 1;
+}
+
+.empty{
+  padding: 5px;
+}
+
+ .textcontentinside{
+    font-size: 78px;
+    font-weight: bolder;
+}
+
+
+
+
+.AppDownload {
+    height: 105px;
+    width: 294px;
+    border-radius: 10px;
+    background: #080808;
+}
