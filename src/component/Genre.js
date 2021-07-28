@@ -31,7 +31,7 @@ function Home(props) {
                                                             borderWidth: 1,
                                                             borderColor: "#c4c4c4",
                                                         }}
-                                                        srcSet={`http://portal.gusei.net/api/${item.genre_image}`}
+                                                        srcSet={`${process.env.REACT_APP_BASE_URL}${item.genre_image}`}
                                                         />
                                                 </div>
                                                 <div className=" col-sm-7 col-xs-6 songdescriptionsn">

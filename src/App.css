@@ -799,6 +799,15 @@ img:hover {
   height: 608px;
 }
 
+.texthess {
+  font-size: 24px;
+
+  opacity: 0.8;
+  font-weight: 550;
+  font-family: sans-serif;
+  padding: 1px;
+  color: #ffffff;
+}
 .mobleftcontent {
   /*   background-color: rosybrown;
  */
@@ -982,7 +991,7 @@ button {
 .songbuttoncards{
 
 
-width: 676px;
+width: 550px;
 height: auto;
 background-color: white;
 box-shadow: 10px 10px 10px #00000080;
@@ -990,15 +999,64 @@ border-radius: 138px;
 opacity: 1;
 display: flex;
 align-items: center;
-padding: 10px;
+
 flex-direction: row;
 }
 
 button.modalbttn {
   position: absolute;
-  left: 130px;
-}
+  left: 89px;
 
+}
+.modal-content {
+    border-radius: 32px !important;
+    background-color: rgba(26,26,26,255)!important
+    ;
+}
+.modal-footer {
+  border: none !important;
+  background-color: #5c6ac0;
+border-bottom-left-radius: 25px !important;
+border-bottom-right-radius: 25px !important;
+border-color: transparent;
+padding: 25px;
+}
+button.close {
+  color: #5c6ac0 !important;
+  position: absolute;
+  right: 29px;
+  font-size: 28px;
+}
+button.modalplaybtn {
+  background: transparent;
+  border: transparent;
+  position: absolute;
+  left: 50px;
+}
+.modal-header {
+  border: none;
+}
+.modtextmaininside {
+  height: 281px;
+  /* background: red; */
+  width: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.modtextmain {
+  padding: 10px;
+/*   background-color: blue;
+ */}
+.modalbodycontent.modal-body {
+  height: 320px;   
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
 .scx{
  
 width: 217px;
@@ -1008,6 +1066,18 @@ justify-content: center;
 align-items: center;
 }
 
+.scxmdimage{
+
+  height: 280px;
+  width: auto;
+
+}
+.scxmd{
+height: 299px;
+width: 100%;
+padding: 10px;
+
+}
 .songdescriptionsn{
   height: auto;
 /*   background-color: orange;
@@ -1016,7 +1086,9 @@ align-items: center;
 }
 
 
-
+.iconheart{
+  padding: 20px;
+}
 .cards-collection.card {
   border-radius: 28px;
   background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
@@ -1415,7 +1487,32 @@ button.songbuttonmain.btn.btn-secondary {
   justify-content: center;
   flex-direction: column;
 }
+
+.modheader{
+  border: none !important;
+}
 .songparagrah {
+  text-align: left;
+  /* font: normal normal 300 19px/23px Montserrat;
+ */
+  color: #707070;
+  opacity: 1;
+  padding: 8px;
+  border-bottom: 0.1px solid #00000080;
+}
+
+.songparagrahmodal {
+  text-align: left;
+  /* font: normal normal 300 19px/23px Montserrat;
+ */
+  color: #989191;
+  opacity: 1;
+  padding: 8px;
+  border-bottom: 0.1px solid  #9891913b;
+}
+
+
+.songparagrahmod {
   text-align: left;
   /* font: normal normal 300 19px/23px Montserrat;
  */

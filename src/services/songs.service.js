@@ -1,7 +1,7 @@
 import { reject } from "q"
 import callapi from "../helper/api.helper"
 
-export const songService={getTopHits}
+export const songService={getTopHits, getMyFavor,getGenre}
 
 function getTopHits(){ return new Promise ((resolve,reject)=>
 
@@ -15,4 +15,27 @@ callapi("GET" ,"top_hits/0" ).then(data=>resolve(data)
 
 }
 
+function getMyFavor(){ return new Promise ((resolve,reject)=>
 
+    callapi("GET" ,"get-favourite-list/0" ).then(data=>resolve(data)
+    
+    
+    )
+    .catch((err)=>reject(err)) )
+    
+    
+    
+    }
+    
+
+function getGenre(){ return new Promise ((resolve,reject)=>
+
+    callapi("GET" ,"genre" ).then(data=>resolve(data)
+    
+    
+    )
+    .catch((err)=>reject(err)) )
+    
+    
+    
+    }

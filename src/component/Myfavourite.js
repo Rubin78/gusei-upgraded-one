@@ -17,14 +17,11 @@ function Myfavourite(props) {
 
 
 
-
 {props.data &&
                 props.data.map(
-                    (item) => (
+                    (song_item) => (
 
 
-                        item.song_details && item.song_details.map(
-                            song_item => (
                                 <>
                                     <div className=" col-sm-12 songplaylist">
                                         <div className=" songplaylistitem">
@@ -40,14 +37,14 @@ function Myfavourite(props) {
                                                             borderWidth: 1,
                                                             borderColor: "#c4c4c4",
                                                         }}
-                                                        srcSet={`http://portal.gusei.net/api/${song_item.thumbnail_url}`}
+                                                        srcSet={`${process.env.REACT_APP_BASE_URL}${song_item.thumbnail_url}`}
                                                     />
 
                                                     <Media>
                                                         <div className="media">
                                                             <div className="media-player">
                                                                 <Player
-                                                                    src={`http://portal.gusei.net/api/${song_item.post_song[0]}`}
+                                                                    src={`${process.env.REACT_APP_BASE_URL}${song_item.post_song[0]}`}
                                                                 />
                                                             </div>
                                                             <div className="media-controls song-play">
@@ -71,7 +68,7 @@ function Myfavourite(props) {
                                                             </div>
 
                                                             <div className=" songparagrah">
-                                                                {song_item.user_details[0].first_name} {song_item.user_details[0].last_name}
+                                                                {song_item.user_details.first_name} {song_item.user_details.last_name}
 
                                                             </div>
 
@@ -83,7 +80,7 @@ function Myfavourite(props) {
                                                                 <div className="col-1">
                                                                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAMAAABxCz6aAAAAM1BMVEUAAACPj4+NjY2NjY2NjY2Ojo6NjY2Pj4+Pj4+Ojo6Ojo6NjY2Pj4+Ojo6Ojo6Ojo6Ojo69xnNrAAAAEHRSTlMAEPBg0KBPPyDfgHAwsJBv1PrvaAAAAGhJREFUGNOt0EsOgCAMRdFS/h+V/a/WFjTVkjjyTl5yEkgA/siEEnlTOOJtpVMYjOfNbdjeZ3kOJj7TVZ7QakTC2nWEUZsDChVWWC9FA9z2wng9yD3MDhIVExUTFZM8/wnoPDZYM/DVCTxTCzt4nbRgAAAAAElFTkSuQmCC" />
                                                                 </div>
-                                                                <div className="col-1 likes">{item.likes}</div>{" "}
+                                                                <div className="col-1 likes">{song_item.likes}</div>{" "}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -96,14 +93,15 @@ function Myfavourite(props) {
 
 
 
-                                    {/*                           {JSON.stringify(song_item)} <br />
- */}                          </>
+                              
+                         </>
 
 
 
 
 
-                            ))))}
+                            
+                            ))}
     </div>
   );
 }
