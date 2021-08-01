@@ -1,13 +1,26 @@
 import React, { useState, useEffect } from "react";
 import MiniPlayer from "./MiniPlayer";
+import 'bootstrap/dist/css/bootstrap.css'; // or include from a CDN
+import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
+
 
 import { Modal, Button, Row } from "react-bootstrap";
 import songmodal1 from "../assests/songmodal1.png"
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import PlayCircleFilledOutlinedIcon from '@material-ui/icons/PlayCircleFilledOutlined';
 import PauseCircleOutlineOutlinedIcon from '@material-ui/icons/PauseCircleOutlineOutlined';
-function Newplayer(props) {
+import ReactPlayer from 'react-player'
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import FavoriteSharpIcon from '@material-ui/icons/FavoriteSharp';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+import { duration } from "@material-ui/core";
+import RangeSlider from 'react-bootstrap-range-slider';
 
+function Newplayer(props) {
+  const [ value, setValue ] = useState(0); 
+
+  AOS.init({ duration: 1000,  once: true,});
 
   const [showmodal2, setShowmodal2] = useState(false);
 
@@ -54,7 +67,7 @@ function Newplayer(props) {
                     borderWidth: 1,
                     borderColor: "#c4c4c4",
                   }}
-                  srcSet={`http://portal.gusei.net/api/${props.thumbnail_url}`}
+                  srcSet={`${process.env.REACT_APP_BASE_URL}${props.thumbnail_url}`}
                 />
 
 
@@ -62,14 +75,10 @@ function Newplayer(props) {
                   props.songs.map((_song) => (
                     <>  <MiniPlayer
                       isplaying={isplaying}
-                      src={"http://portal.gusei.net/api/" + _song}
+                      src={`${process.env.REACT_APP_BASE_URL}` + _song}
+/*                       src={"http://portal.gusei.net/api/" + _song}
+ */
                     />
-
-
-
-
-
-
                     </>
 
 
@@ -79,9 +88,13 @@ function Newplayer(props) {
 
 
                 <>
-                  <Button className="modalbttn" variant="primary" onClick={handleShow}>
-                    play
-                  </Button>
+                  {/*  */}
+                  <button className="modalbttn"  onClick={handleShow}>
+                    <PlayArrowIcon style={{ fontSize:"72"}} />
+                  </button>
+                 {/*  <Button className="" variant="primary" onClick={handlemod2Show}>
+                    play2
+                  </Button> */}
 
 
                   <Modal
@@ -91,11 +104,8 @@ function Newplayer(props) {
 
                     animation={false}>
                     <Modal.Header className="modheader" closeButton>
-       </Modal.Header>
+                    </Modal.Header>
                     <Modal.Body className="modalbodycontent">
-
-
-
 
 
                       <Row>
@@ -118,34 +128,12 @@ function Newplayer(props) {
                               <div className="iconheart"><FavoriteIcon style={{ color: "white", fontSize: 35 }} />
 
                               </div>
-                              <div className="texthess">    ROCK'n' ROll NERD</div>
-                              <div className=" songparagrahmodal"> TIM Minchin</div>
+                              <div data-aos="fade-up"  className="texthess">    ROCK'n' ROll NERD</div>
+                              <div  data-aos="fade-up" data-aos-delay="100" data-aos-anchor=".example-selector" className=" songparagrahmodal"> TIM Minchin</div>
                             </div>
                           </div>
 
-                          {/* 
-<div className=" col-sm-7 col-xs-6 songdescriptionsn" style={{backgroundColor:"red"}}>
-          <div className=" col-sm-11 col-xs-10 songtext">
-            <div className="songtextinside">
-              <div>
-                <div className="texthes">    ROCK'n' ROll NERD</div>
-              </div>
 
-              <div className=" songparagrah"> TIM Minchin</div> */}
-
-                          {/* <div className=" iconssongs">
-                <div className="col-1">
-                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAMAAAD6fQULAAAAM1BMVEUAAACOjo6Ojo6NjY2Ojo6NjY2NjY2Ojo6NjY2NjY2Pj4+Ojo6Ojo6KioqNjY2UlJSOjo6GDC98AAAAEHRSTlMAPvj07NzVvbOdf3VhIx0TKDXzNwAAAEBJREFUCNdtj8cNACAMA+m9eP9pUV4OgvudFMW2Kcso4Ls2IFmaULc2hEET8tQG18RItK/x8v3CBKaz2b/1vegA0z4GU3ZHUEMAAAAASUVORK5CYII=" />
-                </div>
-                <div className="">1.8k</div>{" "}
-                <div className="col-1">
-                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAMAAABxCz6aAAAAM1BMVEUAAACPj4+NjY2NjY2NjY2Ojo6NjY2Pj4+Pj4+Ojo6Ojo6NjY2Pj4+Ojo6Ojo6Ojo6Ojo69xnNrAAAAEHRSTlMAEPBg0KBPPyDfgHAwsJBv1PrvaAAAAGhJREFUGNOt0EsOgCAMRdFS/h+V/a/WFjTVkjjyTl5yEkgA/siEEnlTOOJtpVMYjOfNbdjeZ3kOJj7TVZ7QakTC2nWEUZsDChVWWC9FA9z2wng9yD3MDhIVExUTFZM8/wnoPDZYM/DVCTxTCzt4nbRgAAAAAElFTkSuQmCC" />
-                </div>
-                <div className="col-1 likes">{props.likes}</div>{" "}
-              </div>
-            </div>
-          </div>
-        </div> */}
                         </div>
 
                       </Row>
@@ -167,14 +155,65 @@ function Newplayer(props) {
 
                         ))}
                       <button className="modalplaybtn" onClick={myhandler}>{isplaying ? <PauseCircleOutlineOutlinedIcon style={{ fontSize: 65 }} /> : <PlayCircleFilledOutlinedIcon style={{ fontSize: 65 }} />}</button>
-                      {/* 
-          <Button variant="primary"  onClick={handleClose}>
-            Save Changes
-          </Button> */}
-                    </Modal.Footer>
+{/* <div className="songseektime"><input type="range"  /></div>
+ */}
+
+
+<RangeSlider
+className="song-seektime"
+      value={value}
+      size='sm' 
+      variant	='Primary'	
+      onChange={changeEvent => setValue(changeEvent.target.value)}
+    />
+             <div><input type="range" /></div>       </Modal.Footer>
                   </Modal>
 
+                  <Modal
+                    size="lg"
+                   show={showmodal2}
+                    onHide={handlemod2Close}
+                    animation={false}>
+                    <Modal.Header className="modheader" closeButton>
+                    </Modal.Header>
+                    <Modal.Body>
 
+                      <Row>
+                        <div className="col-3">
+                        <div class="videoWrapper">
+  <iframe width="175" height="300" src="https://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1" frameborder="0" allowfullscreen></iframe>
+</div>
+        
+ *
+</div>
+                        <div className="col-3">  <iframe width="175" height="300" src="https://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1" frameborder="0" allowfullscreen></iframe>
+</div>
+                        <div className="col-3">  <iframe width="175" height="300" src="https://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1" frameborder="0" allowfullscreen></iframe>
+</div>
+                        <div className="col-3">  <iframe width="175" height="300" src="https://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1" frameborder="0" allowfullscreen></iframe>
+</div>
+
+                      </Row>
+
+                    </Modal.Body>
+                    <Modal.Footer>
+
+                      {props.songs &&
+                        props.songs.map((_song) => (
+                          <>  <MiniPlayer
+                            isplaying={isplaying}
+                            src={`${process.env.REACT_APP_BASE_URL}` + _song}
+                          />
+
+
+                          </>
+
+
+                        ))}
+                      <button className="modalplaybtn" onClick={myhandler}>{isplaying ? <PauseCircleOutlineOutlinedIcon style={{ fontSize: 65 }} /> : <PlayCircleFilledOutlinedIcon style={{ fontSize: 65 }} />}</button>
+
+                    </Modal.Footer>
+                  </Modal>
 
 
                   { /*       length = {props.songs && props.songs.length}
@@ -193,14 +232,17 @@ function Newplayer(props) {
                     <div className=" songparagrah">{props.name}</div>
 
                     <div className=" iconssongs">
-                      <div className="col-1">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAMAAAD6fQULAAAAM1BMVEUAAACOjo6Ojo6NjY2Ojo6NjY2NjY2Ojo6NjY2NjY2Pj4+Ojo6Ojo6KioqNjY2UlJSOjo6GDC98AAAAEHRSTlMAPvj07NzVvbOdf3VhIx0TKDXzNwAAAEBJREFUCNdtj8cNACAMA+m9eP9pUV4OgvudFMW2Kcso4Ls2IFmaULc2hEET8tQG18RItK/x8v3CBKaz2b/1vegA0z4GU3ZHUEMAAAAASUVORK5CYII=" />
-                      </div>
-                      <div className="">1.8k</div>{" "}
-                      <div className="col-1">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAMAAABxCz6aAAAAM1BMVEUAAACPj4+NjY2NjY2NjY2Ojo6NjY2Pj4+Pj4+Ojo6Ojo6NjY2Pj4+Ojo6Ojo6Ojo6Ojo69xnNrAAAAEHRSTlMAEPBg0KBPPyDfgHAwsJBv1PrvaAAAAGhJREFUGNOt0EsOgCAMRdFS/h+V/a/WFjTVkjjyTl5yEkgA/siEEnlTOOJtpVMYjOfNbdjeZ3kOJj7TVZ7QakTC2nWEUZsDChVWWC9FA9z2wng9yD3MDhIVExUTFZM8/wnoPDZYM/DVCTxTCzt4nbRgAAAAAElFTkSuQmCC" />
-                      </div>
-                      <div className="col-1 likes">{props.likes}</div>{" "}
+                      <div className="col-1 iconssongsinner">
+                      <PlayArrowIcon style={{ fontSize:"22", color:"#c4c4c4",position:"absolute",right:"5"}} />
+
+{/*                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAMAAAD6fQULAAAAM1BMVEUAAACOjo6Ojo6NjY2Ojo6NjY2NjY2Ojo6NjY2NjY2Pj4+Ojo6Ojo6KioqNjY2UlJSOjo6GDC98AAAAEHRSTlMAPvj07NzVvbOdf3VhIx0TKDXzNwAAAEBJREFUCNdtj8cNACAMA+m9eP9pUV4OgvudFMW2Kcso4Ls2IFmaULc2hEET8tQG18RItK/x8v3CBKaz2b/1vegA0z4GU3ZHUEMAAAAASUVORK5CYII=" />
+ */}                      </div>
+                      <div className="iconssongsinner">1.8k</div>{" "}
+                      <div className="col-1 iconssongsinner">
+                        <FavoriteSharpIcon style={{ fontSize:"22", color:"#c4c4c4",}} />
+{/*                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAMAAABxCz6aAAAAM1BMVEUAAACPj4+NjY2NjY2NjY2Ojo6NjY2Pj4+Pj4+Ojo6Ojo6NjY2Pj4+Ojo6Ojo6Ojo6Ojo69xnNrAAAAEHRSTlMAEPBg0KBPPyDfgHAwsJBv1PrvaAAAAGhJREFUGNOt0EsOgCAMRdFS/h+V/a/WFjTVkjjyTl5yEkgA/siEEnlTOOJtpVMYjOfNbdjeZ3kOJj7TVZ7QakTC2nWEUZsDChVWWC9FA9z2wng9yD3MDhIVExUTFZM8/wnoPDZYM/DVCTxTCzt4nbRgAAAAAElFTkSuQmCC" />
+ */}                      </div>
+                      <div className="col-1 likes iconssongsinner">{props.likes}</div>{" "}
                     </div>
                   </div>
                 </div>

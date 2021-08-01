@@ -24,7 +24,7 @@ return (
           }
 
 export default Alltimefavourite;
- */
+  */
 
 
 import React from 'react';

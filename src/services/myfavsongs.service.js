@@ -1,4 +1,4 @@
-import { reject } from "q"
+/* import { reject } from "q"
 import callapi from "../helper/api.helper"
 
 export const myFavsongsService={getMyFavor}
@@ -16,3 +16,4 @@ callapi("GET" ,"get-favourite-list/0" ).then(data=>resolve(data)
 }
 
 
+ */

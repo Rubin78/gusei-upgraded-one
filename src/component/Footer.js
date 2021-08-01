@@ -115,17 +115,19 @@ function Footer(props) {
                                 onHide={() => setShowmod1(false)}
                                 size="lg"
 
-                                dialogClassName="modal-90w"
+                                dialogClassName="modal-90w ssh"
                                 data-backdrop="false"
                                 aria-labelledby="contained-modal-title-vcenter"
                                 centered
 
                             >
+                                  <div class="modal-content txtn">
+
                                 <Modal.Header className="modalborder" closeButton>
 
                                 </Modal.Header>
                                 <Modal.Body>
-
+                             
                                     <>  <embed src="http://portal.gusei.net/api/media/document/terms_condition/terms-and-conditions-template_120720212248349920.pdf#view=FitH&toolbar=0&statusbar=0&messages=0&navpanes=0&scrollbar=0"
                                         frameBorder="0"
                                         width="100%"
@@ -135,7 +137,7 @@ function Footer(props) {
 
                                     /></>
                                 </Modal.Body>
-
+</div>
                             </Modal>
 
 
@@ -151,6 +153,8 @@ function Footer(props) {
                                 centered
 
                             >
+                                                                  <div class="modal-content txtn">
+
                                 <Modal.Header className="modalborder" closeButton>
 
                                 </Modal.Header>
@@ -163,7 +167,7 @@ function Footer(props) {
 
                                     /></>
                                 </Modal.Body>
-
+</div>
                             </Modal>
 
 
@@ -181,6 +185,8 @@ function Footer(props) {
                                 centered
 
                             >
+                                                                  <div class="modal-content txtn">
+
                                 <Modal.Header className="modalborder" closeButton>
 
                                 </Modal.Header>
@@ -193,7 +199,7 @@ function Footer(props) {
 
                                     /></>
                                 </Modal.Body>
-
+</div>
                             </Modal>
 
 
@@ -209,7 +215,8 @@ function Footer(props) {
                                 aria-labelledby="contained-modal-title-vcenter"
                                 centered
 
-                            >
+                            >                                  <div class="modal-content txtn">
+
                                 <Modal.Header className="modalborder" closeButton>
 
                                 </Modal.Header>
@@ -222,7 +229,7 @@ function Footer(props) {
 
                                     /></>
                                 </Modal.Body>
-
+</div>
                             </Modal>
 
 
@@ -237,7 +244,8 @@ function Footer(props) {
                                 aria-labelledby="contained-modal-title-vcenter"
                                 centered
 
-                            >
+                            >                                  <div class="modal-content txtn">
+
                                 <Modal.Header className="modalborder" closeButton>
 
                                 </Modal.Header>
@@ -251,7 +259,7 @@ function Footer(props) {
 
                                     /></>
                                 </Modal.Body>
-
+</div>
                             </Modal>
                         </>
 

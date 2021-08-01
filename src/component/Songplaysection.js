@@ -59,6 +59,7 @@ function Songplaysection(props) {
         songService.getTopHits().then(data => {
             setData(data);
             setSelectbutton("Tophit")
+            alert("hello")
 
         }).catch((res) => {
             console.log("ERR", res);

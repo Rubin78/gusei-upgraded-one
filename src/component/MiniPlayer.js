@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 let newaudio = new Audio();
 
 function MiniPlayer(props) {
+
+
+  
   useEffect(() => {
     console.log("calling useeffect", props.isplaying);
     newaudio.pause();
@@ -22,5 +25,8 @@ function MiniPlayer(props) {
     </div>
   );
 }
+
+
+
 
 export default MiniPlayer;
